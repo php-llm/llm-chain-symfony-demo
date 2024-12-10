@@ -14,6 +14,7 @@ What you need to run this demo:
 * [Git](https://git-scm.com/) & [GitHub Account](https://github.com)
 * [Docker](https://www.docker.com/) with [Docker Compose Plugin](https://docs.docker.com/compose/)
 * Your Favorite IDE or Editor
+* An [OpenAI API Key](https://platform.openai.com/docs/api-reference/create-and-export-an-api-key)
 
 ## Technology
 
