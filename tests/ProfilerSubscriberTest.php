@@ -28,10 +28,10 @@ final class ProfilerSubscriberTest extends TestCase
         $response = new Response();
         $event = new ResponseEvent($this->createMock(Kernel::class), new Request(), $requestType, $response);
 
-        $listener = new ProfilerSubscriber($debug);
-        $listener->onKernelResponse($event);
+        $subscriber = new ProfilerSubscriber($debug);
+        $subscriber->onKernelResponse($event);
 
-        $this->assertFalse($response->headers->has('Symfony-Debug-Toolbar-Replace'));
+        self::assertFalse($response->headers->has('Symfony-Debug-Toolbar-Replace'));
     }
 
     /**
@@ -53,9 +53,15 @@ final class ProfilerSubscriberTest extends TestCase
         $response = new Response();
         $event = new ResponseEvent($this->createMock(Kernel::class), $request, HttpKernelInterface::MAIN_REQUEST, $response);
 
-        $listener = new ProfilerSubscriber(true);
-        $listener->onKernelResponse($event);
+        $subscriber = new ProfilerSubscriber(true);
+        $subscriber->onKernelResponse($event);
 
-        $this->assertEquals('1', $response->headers->get('Symfony-Debug-Toolbar-Replace'));
+        self::assertEquals('1', $response->headers->get('Symfony-Debug-Toolbar-Replace'));
+    }
+
+    public function testSubscriberIsSubscribedToResponseEvent(): void
+    {
+        self::assertArrayHasKey(ResponseEvent::class, ProfilerSubscriber::getSubscribedEvents());
+        self::assertIsString(ProfilerSubscriber::getSubscribedEvents()[ResponseEvent::class]);
     }
 }
