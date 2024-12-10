@@ -1,0 +1,45 @@
+name: pipeline
+on: pull_request
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: 8.4
+          coverage: none
+
+      - name: Install Composer
+        uses: ramsey/composer-install@v3
+
+      - name: Composer Validation
+        run: composer validate --strict
+
+      - name: Install PHP Dependencies
+        run: composer install --no-scripts
+
+      - name: Lint PHP
+        run: php -l src/**/*.php
+
+      - name: Lint Templates
+        run: bin/console lint:twig templates
+
+      - name: Lint Config
+        run: bin/console lint:yaml config
+
+      - name: Lint Container
+        run: bin/console lint:container
+
+      - name: Code Style PHP
+        run: PHP_CS_FIXER_IGNORE_ENV=1 vendor/bin/php-cs-fixer fix --dry-run
+
+      - name: PHPStan
+        run: vendor/bin/phpstan analyse
+
+      - name: Tests
+        run: vendor/bin/phpunit
