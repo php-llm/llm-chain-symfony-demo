@@ -37,7 +37,7 @@ Checkout the repository, start the docker environment and install dependencies:
 git clone git@github.com:php-llm/symfony-demo.git
 cd symfony-demo
 docker compose up -d
-docker compose run composer install --no-scripts
+docker compose run composer install
 ```
 
 Now you should be able to open https://localhost/ in your browser,
