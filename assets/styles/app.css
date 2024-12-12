@@ -72,10 +72,18 @@ body {
 
             .rag & {
                 background: #dc8b6e;
+
+                a {
+                    color: #f4e973;
+                }
             }
 
             .youtube & {
                 background: #df3535;
+
+                a {
+                    color: #3e2926;
+                }
             }
 
             .wikipedia & {

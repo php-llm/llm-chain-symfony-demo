@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b3492f124ff5c8349f283273cd9e42fc",
+    "content-hash": "18c7e48ce770bdde7cc49cde13bb84d2",
     "packages": [
         {
             "name": "codewithkyrian/chromadb-php",
@@ -1177,16 +1177,16 @@
         },
         {
             "name": "php-llm/llm-chain-bundle",
-            "version": "dev-feat-prepare-0.8",
+            "version": "0.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-llm/llm-chain-bundle.git",
-                "reference": "5db2d4643339e7dce884a6caea61e39b55ebc23a"
+                "reference": "ca77abb0bf1fab8d551408a6c95bd8ad2b69a982"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-llm/llm-chain-bundle/zipball/5db2d4643339e7dce884a6caea61e39b55ebc23a",
-                "reference": "5db2d4643339e7dce884a6caea61e39b55ebc23a",
+                "url": "https://api.github.com/repos/php-llm/llm-chain-bundle/zipball/ca77abb0bf1fab8d551408a6c95bd8ad2b69a982",
+                "reference": "ca77abb0bf1fab8d551408a6c95bd8ad2b69a982",
                 "shasum": ""
             },
             "require": {
@@ -1197,9 +1197,9 @@
                 "symfony/framework-bundle": "^6.4 || ^7.0"
             },
             "require-dev": {
-                "php-cs-fixer/shim": "^3.64",
+                "php-cs-fixer/shim": "^3.65",
                 "phpstan/phpstan": "^2.0",
-                "phpunit/phpunit": "^11.3"
+                "phpunit/phpunit": "^11.5"
             },
             "type": "symfony-bundle",
             "autoload": {
@@ -1220,9 +1220,9 @@
             "description": "Symfony integration bundle for php-llm/llm-chain",
             "support": {
                 "issues": "https://github.com/php-llm/llm-chain-bundle/issues",
-                "source": "https://github.com/php-llm/llm-chain-bundle/tree/feat-prepare-0.8"
+                "source": "https://github.com/php-llm/llm-chain-bundle/tree/0.9"
             },
-            "time": "2024-12-08T16:49:35+00:00"
+            "time": "2024-12-12T23:47:19+00:00"
         },
         {
             "name": "phpdocumentor/reflection-common",
@@ -8376,10 +8376,8 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "php-llm/llm-chain-bundle": 20
-    },
-    "prefer-stable": true,
+    "stability-flags": {},
+    "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
         "php": ">=8.4",

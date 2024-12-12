@@ -1,9 +1,23 @@
 llm_chain:
     platform:
+        # anthropic:
+        #     api_key: '%env(ANTHROPIC_API_KEY)%'
+        # azure:
+        #     gpt_deployment:
+        #         base_url: '%env(AZURE_GPT_BASE_URL)%'
+        #         deployment: '%env(AZURE_GPT_DEPLOYMENT)%'
+        #         api_key: '%env(AZURE_GPT_API_KEY)%'
+        #         api_version: '%env(AZURE_GPT_VERSION)%'
+        #     embeddings_deployment:
+        #         base_url: '%env(AZURE_EMBEDDINGS_BASE_URL)%'
+        #         deployment: '%env(AZURE_EMBEDDINGS_DEPLOYMENT)%'
+        #         api_key: '%env(AZURE_EMBEDDINGS_API_KEY)%'
+        #         api_version: '%env(AZURE_EMBEDDINGS_VERSION)%'
         openai:
             api_key: '%env(OPENAI_API_KEY)%'
     chain:
         rag:
+            # platform: 'llm_chain.platform.anthropic'
             model:
                 name: 'GPT'
                 version: 'gpt-4o-mini'
@@ -18,23 +32,34 @@ llm_chain:
             model:
                 name: 'GPT'
                 version: 'gpt-4o-mini'
+                options:
+                    temperature: 0.5
             tools:
                 - 'PhpLlm\LlmChain\Chain\ToolBox\Tool\Wikipedia'
     store:
         chroma_db:
             symfonycon:
-                host: '%env(CHROMADB_HOST)%'
                 collection: 'symfony_blog'
+            # web_summer_camp:
+            #     host: '%env(CHROMADB_HOST)%'
+            #     collection: 'wsc_program'
+    embedder:
+        default:
+            # platform: 'llm_chain.platform.anthropic'
+            # store: 'llm_chain.store.chroma_db.symfonycon'
+            model:
+                name: 'Embeddings'
+                version: 'text-embedding-ada-002'
 
 services:
     _defaults:
         autowire: true
         autoconfigure: true
 
+    # PhpLlm\LlmChain\Chain\ToolBox\Tool\Clock: ~
+    # PhpLlm\LlmChain\Chain\ToolBox\Tool\OpenMeteo: ~
+    # PhpLlm\LlmChain\Chain\ToolBox\Tool\SerpApi:
+    #     $apiKey: '%env(SERP_API_KEY)%'
     PhpLlm\LlmChain\Chain\ToolBox\Tool\Wikipedia: ~
     PhpLlm\LlmChain\Chain\ToolBox\Tool\SimilaritySearch: ~
-
-    # TODO: move to configuration
-    PhpLlm\LlmChain\Bridge\OpenAI\Embeddings: ~
-    PhpLlm\LlmChain\Model\EmbeddingsModel: '@PhpLlm\LlmChain\Bridge\OpenAI\Embeddings'
 
