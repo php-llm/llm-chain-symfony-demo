@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\Twig;
+namespace App\YouTube\Twig;
 
-use App\Chat\YouTube;
+use App\YouTube\Chat\YouTube;
 use PhpLlm\LlmChain\Model\Message\MessageBag;
 use Psr\Log\LoggerInterface;
 use Symfony\UX\LiveComponent\Attribute\AsLiveComponent;

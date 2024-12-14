@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Chat;
+namespace App\YouTube\Chat;
 
 use App\YouTube\TranscriptFetcher;
 use PhpLlm\LlmChain\ChainInterface;
