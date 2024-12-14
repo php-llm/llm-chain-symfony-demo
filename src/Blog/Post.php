@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Rag\Blog;
+namespace App\Blog;
 
 use Symfony\Component\Uid\Uuid;
 

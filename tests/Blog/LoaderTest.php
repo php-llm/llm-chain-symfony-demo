@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace App\Tests\Rag\Blog;
+namespace App\Tests\Blog;
 
-use App\Rag\Blog\Loader;
-use App\Rag\Blog\Post;
+use App\Blog\Loader;
+use App\Blog\Post;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\UsesClass;
 use PHPUnit\Framework\TestCase;

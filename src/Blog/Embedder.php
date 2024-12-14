@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Rag\Blog;
+namespace App\Blog;
 
 use PhpLlm\LlmChain\Document\Metadata;
 use PhpLlm\LlmChain\Document\TextDocument;

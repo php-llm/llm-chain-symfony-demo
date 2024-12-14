@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\Rag\Twig;
+namespace App\Blog\Twig;
 
-use App\Rag\Chat\Rag;
+use App\Blog\Chat\Blog;
 use PhpLlm\LlmChain\Model\Message\MessageBag;
 use Symfony\UX\LiveComponent\Attribute\AsLiveComponent;
 use Symfony\UX\LiveComponent\Attribute\LiveAction;
@@ -12,12 +12,12 @@ use Symfony\UX\LiveComponent\Attribute\LiveArg;
 use Symfony\UX\LiveComponent\DefaultActionTrait;
 
 #[AsLiveComponent('rag')]
-final class RagComponent
+final class BlogComponent
 {
     use DefaultActionTrait;
 
     public function __construct(
-        private readonly Rag $chat,
+        private readonly Blog $chat,
     ) {
     }
 

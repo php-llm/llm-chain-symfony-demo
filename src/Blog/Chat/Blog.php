@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Rag\Chat;
+namespace App\Blog\Chat;
 
 use PhpLlm\LlmChain\ChainInterface;
 use PhpLlm\LlmChain\Model\Message\Message;
@@ -11,7 +11,7 @@ use PhpLlm\LlmChain\Model\Response\TextResponse;
 use Symfony\Component\DependencyInjection\Attribute\Autowire;
 use Symfony\Component\HttpFoundation\RequestStack;
 
-final class Rag
+final class Blog
 {
     private const SESSION_KEY = 'rag-chat';
 
