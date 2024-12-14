@@ -17,7 +17,7 @@
                 </div>
             {% else %}
                 <div class="bot-message d-inline-block p-2 px-3 m-1 border border-light-subtle shadow-sm">
-                    {% if latest %}
+                    {% if latest and app.request.xmlHttpRequest %}
                         <span
                                 data-controller="symfony--ux-typed"
                                 data-symfony--ux-typed-show-cursor-value="false"
