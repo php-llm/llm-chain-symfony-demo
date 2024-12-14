@@ -3,6 +3,7 @@
 Simple Symfony demo application on top of [LLM Chain](https://github.com/php-llm/llm-chain) and its [integration bundle](https://github.com/php-llm/llm-chain-bundle).
 
 ## Examples
+
 ![demo.png](demo.png)
 
 ## Requirements
@@ -34,6 +35,7 @@ The setup is split into three parts, the Symfony application, the OpenAI configu
 ### 1. Symfony App
 
 Checkout the repository, start the docker environment and install dependencies:
+
 ```shell
 git clone git@github.com:php-llm/symfony-demo.git
 cd symfony-demo
@@ -44,12 +46,20 @@ docker compose run composer install
 Now you should be able to open https://localhost/ in your browser,
 and the chatbot UI should be available for you to start chatting.
 
+> [!NOTE]  
+> You might have to bypass the security warning of your browser with regard to self-signed certificates.
+
 ### 2. OpenAI Configuration
 
 For using GPT and embedding models from OpenAI, you need to configure an OpenAI API key as environment variable.
 This requires you to have an OpenAI account, create a valid API key and set it as `OPENAI_API_KEY` in `.env.local` file.
 
+```shell
+echo "OPENAI_API_KEY='sk-...'" > .env.local
+```
+
 Verify the success of this step by running the following command:
+
 ```shell
 docker compose exec app bin/console debug:dotenv
 ```
@@ -58,23 +68,25 @@ You should be able to see the `OPENAI_API_KEY` in the list of environment variab
 
 ### 3. Chroma DB Initialization
 
-The Chroma DB is a vector store that is used to store embeddings of the chatbot's context.
+The [Chroma DB](https://www.trychroma.com/) is a vector store that is used to store embeddings of the chatbot's context.
 
 To initialize the Chroma DB, you need to run the following command:
+
 ```shell
 docker compose exec app bin/console app:blog:embed -vv
 ```
 
 Now you should be able to run the test command and get some results:
+
 ```shell
 docker compose exec app bin/console app:chroma:test
 ```
 
-**Don't forget to set up the project in your favorite IDE or editor.** 
+**Don't forget to set up the project in your favorite IDE or editor.**
 
 ## Functionality
 
 * The chatbot application is a simple and small Symfony 7.2 application.
-* The UI is coupled to a Twig LiveComponent, that integrates different `Chat` implementations on top of the user's session.
+* The UI is coupled to a [Twig LiveComponent](https://symfony.com/bundles/ux-live-component/current/index.html), that integrates different `Chat` implementations on top of the user's session.
 * You can reset the chat context by hitting the `Reset` button in the top right corner.
 * You find three different usage scenarios in the upper navbar.
