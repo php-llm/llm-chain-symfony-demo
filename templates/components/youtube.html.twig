@@ -1,18 +1,18 @@
-{% import "components/_message.html.twig" as message %}
+{% import "_message.html.twig" as message %}
 
 <div class="card mx-auto shadow-lg" {{ attributes.defaults(stimulus_controller('youtube')) }}>
     <div class="card-header p-2">
-            {{ ux_icon('bi:youtube', { height: '32px', width: '32px' }) }}
-            <strong class="ms-1 pt-1 d-inline-block">Chat about a YouTube Video</strong>
+        {{ ux_icon('bi:youtube', { height: '32px', width: '32px' }) }}
+        <strong class="ms-1 pt-1 d-inline-block">YouTube Transcript Bot</strong>
         <button id="chat-reset" class="btn btn-sm btn-outline-secondary float-end">{{ ux_icon('material-symbols:cancel') }} Reset Chat</button>
     </div>
     <div id="chat-body" class="card-body p-4 overflow-auto">
         {% set messages = this.messages %}
         {% for message in messages %}
-            {% include 'components/_message.html.twig' with { message, latest: loop.last } %}
+            {% include '_message.html.twig' with { message, latest: loop.last } %}
         {% else %}
             <div id="welcome" class="text-center mt-5 py-5 bg-white rounded-5 shadow-sm w-75 mx-auto">
-                {{ ux_icon('bi:youtube', { color: '#FF0000', height: '100px', width: '100px' }) }}
+                {{ ux_icon('bi:youtube', { color: '#FF0000', height: '200px', width: '200px' }) }}
                 <h4 class="mt-5">Chat about a YouTube Video</h4>
                 <div class="w-75 mx-auto text-start">
                     <label for="youtube-id" class="form-label">Enter the ID of the YouTube video (e.g. <code>6uXW-ulpj0s</code>) to initialize the chat:</label>
@@ -26,7 +26,7 @@
         {% endfor %}
         <div id="loading-message" class="d-none">
             {{ message.user([{text:''}]) }}
-            {{ message.bot('Your Symfony bot is looking for an answer ...', true) }}
+            {{ message.bot('The Youtube Bot is looking for an answer ...', true) }}
         </div>
     </div>
     <div class="card-footer p-2">

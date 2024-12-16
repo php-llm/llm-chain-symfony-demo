@@ -1,0 +1,49 @@
+.youtube {
+    body&, .card-img-top {
+        background: rgb(34,34,34);
+        background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgb(71, 71, 71) 100%);
+    }
+
+    .card-img-top {
+        color: #ff0000;
+    }
+
+    &.chat {
+        .user-message {
+            background: #3e2926;
+            color: #fafafa;
+        }
+
+        .bot-message {
+            color: #ffffff;
+            background: #df3535;
+
+            &.loading {
+                color: rgba(255, 255, 255, 0.5);
+            }
+        }
+
+        .avatar {
+            &.bot {
+                outline: 1px solid #ffcccc;
+                background: #ffcccc;
+            }
+
+            &.user {
+                outline: 1px solid #9e8282;
+                background: #9e8282;
+            }
+        }
+
+        #welcome h4 {
+            color: #ff0000;
+        }
+
+        #chat-reset, #chat-submit {
+            &:hover {
+                background: #ff0000;
+                border-color: #ff0000;
+            }
+        }
+    }
+}

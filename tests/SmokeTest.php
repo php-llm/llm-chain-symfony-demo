@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Tests;
 
 use PHPUnit\Framework\Attributes\CoversNothing;
+use PHPUnit\Framework\Attributes\DataProvider;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 use Symfony\UX\LiveComponent\Test\InteractsWithLiveComponents;
 
@@ -19,37 +20,28 @@ final class SmokeTest extends WebTestCase
         $client->request('GET', '/');
 
         self::assertResponseIsSuccessful();
-        self::assertSelectorTextContains('h1', 'Welcome');
+        self::assertSelectorTextSame('h1', 'Welcome to the LLM Chain Demo');
         self::assertSelectorCount(3, '.card');
     }
 
-    public function testRag(): void
+    #[DataProvider('provideChats')]
+    public function testChats(string $path, string $expectedHeadline): void
     {
         $client = static::createClient();
-        $client->request('GET', '/rag');
+        $client->request('GET', $path);
 
         self::assertResponseIsSuccessful();
-        self::assertSelectorTextContains('h4', 'Retrieval Augmented Generation with the Symfony blog');
+        self::assertSelectorTextSame('h4', $expectedHeadline);
         self::assertSelectorCount(1, '#chat-submit');
     }
 
-    public function testYouTube(): void
+    /**
+     * @return iterable<array{string, string}>
+     */
+    public static function provideChats(): iterable
     {
-        $client = static::createClient();
-        $client->request('GET', '/youtube');
-
-        self::assertResponseIsSuccessful();
-        self::assertSelectorTextContains('h4', 'Chat about a YouTube Video');
-        self::assertSelectorCount(1, '#chat-submit');
-    }
-
-    public function testWikipedia(): void
-    {
-        $client = static::createClient();
-        $client->request('GET', '/wikipedia');
-
-        self::assertResponseIsSuccessful();
-        self::assertSelectorTextContains('h4', 'Wikipedia Research');
-        self::assertSelectorCount(1, '#chat-submit');
+        yield 'Blog' => ['/blog', 'Retrieval Augmented Generation based on the Symfony blog'];
+        yield 'YouTube' => ['/youtube', 'Chat about a YouTube Video'];
+        yield 'Wikipedia' => ['/wikipedia', 'Wikipedia Research'];
     }
 }

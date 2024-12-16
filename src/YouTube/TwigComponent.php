@@ -2,9 +2,8 @@
 
 declare(strict_types=1);
 
-namespace App\YouTube\Twig;
+namespace App\YouTube;
 
-use App\YouTube\Chat\YouTube;
 use PhpLlm\LlmChain\Model\Message\MessageBag;
 use Psr\Log\LoggerInterface;
 use Symfony\UX\LiveComponent\Attribute\AsLiveComponent;
@@ -15,12 +14,12 @@ use Symfony\UX\LiveComponent\DefaultActionTrait;
 use function Symfony\Component\String\u;
 
 #[AsLiveComponent('youtube')]
-final class YouTubeComponent
+final class TwigComponent
 {
     use DefaultActionTrait;
 
     public function __construct(
-        private readonly YouTube $youTube,
+        private readonly Chat $youTube,
         private readonly LoggerInterface $logger,
     ) {
     }

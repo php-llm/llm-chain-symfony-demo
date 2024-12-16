@@ -1,4 +1,4 @@
-{% import "components/_message.html.twig" as message %}
+{% import "_message.html.twig" as message %}
 
 <div class="card mx-auto shadow-lg" {{ attributes.defaults(stimulus_controller('wikipedia')) }}>
     <div class="card-header p-2">
@@ -8,17 +8,17 @@
     </div>
     <div id="chat-body" class="card-body p-4 overflow-auto">
         {% for message in this.messages %}
-            {% include 'components/_message.html.twig' with { message, latest: loop.last } %}
+            {% include '_message.html.twig' with { message, latest: loop.last } %}
         {% else %}
             <div id="welcome" class="text-center mt-5 py-5 bg-white rounded-5 shadow-sm w-75 mx-auto">
-                {{ ux_icon('mdi:wikipedia', { height: '100px', width: '100px' }) }}
+                {{ ux_icon('mdi:wikipedia', { height: '200px', width: '200px' }) }}
                 <h4 class="mt-5">Wikipedia Research</h4>
                 <span class="text-muted">Please provide the bot with a topic down below to start the research.</span>
             </div>
         {% endfor %}
         <div id="loading-message" class="d-none">
             {{ message.user([{text:''}]) }}
-            {{ message.bot('Your Wikipedia bot is doing some research ...', true) }}
+            {{ message.bot('The Wikipedia Bot is doing some research ...', true) }}
         </div>
     </div>
     <div class="card-footer p-2">

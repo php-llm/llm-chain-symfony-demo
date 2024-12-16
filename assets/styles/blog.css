@@ -1,0 +1,61 @@
+.blog {
+    body&, .card-img-top {
+        background: #2c5282;
+        background: linear-gradient(0deg, #2c5282 0%, #3c366b 100%);
+    }
+
+    .card-img-top {
+        color: #ffffff;
+    }
+
+    &.chat {
+        .user-message {
+            background: #d5054e;
+            color: #ffffff;
+        }
+
+        .bot-message {
+            color: #ffffff;
+            background: #3182ce;
+
+            &.loading {
+                color: rgba(255, 255, 255, 0.5);
+            }
+
+            a {
+                color: #c8d8ef;
+
+                &:hover {
+                    color: #ffffff;
+                }
+            }
+
+            code {
+                color: #ffb1ca;
+            }
+        }
+
+        .avatar {
+            &.bot {
+                outline: 1px solid #b8d8fb;
+                background: #b8d8fb;
+            }
+
+            &.user {
+                outline: 1px solid #ffb1ca;
+                background: #ffb1ca;
+            }
+        }
+
+        #welcome h4 {
+            color: #2c5282;
+        }
+
+        #chat-reset, #chat-submit {
+            &:hover {
+                background: #d5054e;
+                border-color: #d5054e;
+            }
+        }
+    }
+}

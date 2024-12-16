@@ -1,0 +1,31 @@
+.wikipedia {
+    body&, .card-img-top {
+        background: url('/wiki.png') no-repeat right 50px bottom 50px fixed, linear-gradient(0deg, rgb(246, 246, 246) 0%, rgb(197, 197, 197) 100%);
+    }
+
+    &.chat {
+        .card-body {
+            background-image: linear-gradient(135deg, #f2f2f2 16.67%, #ebebeb 16.67%, #ebebeb 50%, #f2f2f2 50%, #f2f2f2 66.67%, #ebebeb 66.67%, #ebebeb 100%);
+            background-size: 21.21px 21.21px;
+        }
+
+        .user-message {
+            background: #ffffff;
+        }
+
+        .bot-message {
+            background: #ffffff;
+
+            a {
+                color: #3e2926;
+            }
+        }
+
+        .avatar {
+            &.bot, &.user {
+                outline: 1px solid #eaeaea;
+                background: #eaeaea;
+            }
+        }
+    }
+}
