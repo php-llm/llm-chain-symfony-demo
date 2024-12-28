@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0395b23442a823f4676ba474d265ed60",
+    "content-hash": "f1e20cc0cd7de30bb5bf17fe4a3125ed",
     "packages": [
         {
             "name": "codewithkyrian/chromadb-php",
@@ -1097,20 +1097,69 @@
             "time": "2024-08-07T15:39:19+00:00"
         },
         {
-            "name": "php-llm/llm-chain",
-            "version": "0.10.0",
+            "name": "oskarstark/enum-helper",
+            "version": "1.5.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/php-llm/llm-chain.git",
-                "reference": "8365e13aa892abfc3a2c54d2067c82cf8e30e830"
+                "url": "https://github.com/OskarStark/enum-helper.git",
+                "reference": "839bbde09f66d50553c71e87d1eae378bbcec4ff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-llm/llm-chain/zipball/8365e13aa892abfc3a2c54d2067c82cf8e30e830",
-                "reference": "8365e13aa892abfc3a2c54d2067c82cf8e30e830",
+                "url": "https://api.github.com/repos/OskarStark/enum-helper/zipball/839bbde09f66d50553c71e87d1eae378bbcec4ff",
+                "reference": "839bbde09f66d50553c71e87d1eae378bbcec4ff",
                 "shasum": ""
             },
             "require": {
+                "php": ">=8.2"
+            },
+            "require-dev": {
+                "ergebnis/php-cs-fixer-config": "^5.16",
+                "phpstan/phpstan": "^1.11.8",
+                "phpunit/phpunit": "^9.6.20"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "OskarStark\\Enum\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Oskar Stark",
+                    "email": "oskarstark@googlemail.com"
+                }
+            ],
+            "description": "This library provides helpers for several enum operations",
+            "keywords": [
+                "enum"
+            ],
+            "support": {
+                "issues": "https://github.com/OskarStark/enum-helper/issues",
+                "source": "https://github.com/OskarStark/enum-helper/tree/1.5.0"
+            },
+            "time": "2024-09-19T20:02:53+00:00"
+        },
+        {
+            "name": "php-llm/llm-chain",
+            "version": "0.11",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-llm/llm-chain.git",
+                "reference": "f064e67a10ae8c0f24ed13da022dd30a7a878a50"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-llm/llm-chain/zipball/f064e67a10ae8c0f24ed13da022dd30a7a878a50",
+                "reference": "f064e67a10ae8c0f24ed13da022dd30a7a878a50",
+                "shasum": ""
+            },
+            "require": {
+                "oskarstark/enum-helper": "^1.5",
                 "php": ">=8.2",
                 "phpdocumentor/reflection-docblock": "^5.4",
                 "psr/cache": "^3.0",
@@ -1171,27 +1220,27 @@
             "description": "A slim PHP component with tooling around LLMs.",
             "support": {
                 "issues": "https://github.com/php-llm/llm-chain/issues",
-                "source": "https://github.com/php-llm/llm-chain/tree/0.10.0"
+                "source": "https://github.com/php-llm/llm-chain/tree/0.11"
             },
-            "time": "2024-12-19T07:34:29+00:00"
+            "time": "2024-12-28T22:43:20+00:00"
         },
         {
             "name": "php-llm/llm-chain-bundle",
-            "version": "0.9.2",
+            "version": "0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-llm/llm-chain-bundle.git",
-                "reference": "fa3456102964a223505f44d1e8eaeea3cc272d08"
+                "reference": "9ffa8d4e9b01cb8fd58c58182afaef9ec57ff95b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-llm/llm-chain-bundle/zipball/fa3456102964a223505f44d1e8eaeea3cc272d08",
-                "reference": "fa3456102964a223505f44d1e8eaeea3cc272d08",
+                "url": "https://api.github.com/repos/php-llm/llm-chain-bundle/zipball/9ffa8d4e9b01cb8fd58c58182afaef9ec57ff95b",
+                "reference": "9ffa8d4e9b01cb8fd58c58182afaef9ec57ff95b",
                 "shasum": ""
             },
             "require": {
                 "php": ">=8.2",
-                "php-llm/llm-chain": "^0.9.3 || ^0.10.0",
+                "php-llm/llm-chain": "^0.11",
                 "symfony/config": "^6.4 || ^7.0",
                 "symfony/dependency-injection": "^6.4 || ^7.0",
                 "symfony/framework-bundle": "^6.4 || ^7.0"
@@ -1220,9 +1269,9 @@
             "description": "Symfony integration bundle for php-llm/llm-chain",
             "support": {
                 "issues": "https://github.com/php-llm/llm-chain-bundle/issues",
-                "source": "https://github.com/php-llm/llm-chain-bundle/tree/0.9.2"
+                "source": "https://github.com/php-llm/llm-chain-bundle/tree/0.11"
             },
-            "time": "2024-12-19T08:07:52+00:00"
+            "time": "2024-12-28T23:08:43+00:00"
         },
         {
             "name": "phpdocumentor/reflection-common",
@@ -2218,12 +2267,12 @@
             },
             "type": "library",
             "extra": {
+                "thanks": {
+                    "url": "https://github.com/symfony/contracts",
+                    "name": "symfony/contracts"
+                },
                 "branch-alias": {
                     "dev-main": "3.5-dev"
-                },
-                "thanks": {
-                    "name": "symfony/contracts",
-                    "url": "https://github.com/symfony/contracts"
                 }
             },
             "autoload": {
@@ -2680,12 +2729,12 @@
             },
             "type": "library",
             "extra": {
+                "thanks": {
+                    "url": "https://github.com/symfony/contracts",
+                    "name": "symfony/contracts"
+                },
                 "branch-alias": {
                     "dev-main": "3.5-dev"
-                },
-                "thanks": {
-                    "name": "symfony/contracts",
-                    "url": "https://github.com/symfony/contracts"
                 }
             },
             "autoload": {
@@ -3044,12 +3093,12 @@
             },
             "type": "library",
             "extra": {
+                "thanks": {
+                    "url": "https://github.com/symfony/contracts",
+                    "name": "symfony/contracts"
+                },
                 "branch-alias": {
                     "dev-main": "3.5-dev"
-                },
-                "thanks": {
-                    "name": "symfony/contracts",
-                    "url": "https://github.com/symfony/contracts"
                 }
             },
             "autoload": {
@@ -4651,12 +4700,12 @@
             },
             "type": "library",
             "extra": {
+                "thanks": {
+                    "url": "https://github.com/symfony/contracts",
+                    "name": "symfony/contracts"
+                },
                 "branch-alias": {
                     "dev-main": "3.5-dev"
-                },
-                "thanks": {
-                    "name": "symfony/contracts",
-                    "url": "https://github.com/symfony/contracts"
                 }
             },
             "autoload": {
@@ -4885,12 +4934,12 @@
             },
             "type": "library",
             "extra": {
+                "thanks": {
+                    "url": "https://github.com/symfony/contracts",
+                    "name": "symfony/contracts"
+                },
                 "branch-alias": {
                     "dev-main": "3.5-dev"
-                },
-                "thanks": {
-                    "name": "symfony/contracts",
-                    "url": "https://github.com/symfony/contracts"
                 }
             },
             "autoload": {
@@ -6963,16 +7012,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "11.5.1",
+            "version": "11.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "2b94d4f2450b9869fa64a46fd8a6a41997aef56a"
+                "reference": "153d0531b9f7e883c5053160cad6dd5ac28140b3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/2b94d4f2450b9869fa64a46fd8a6a41997aef56a",
-                "reference": "2b94d4f2450b9869fa64a46fd8a6a41997aef56a",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/153d0531b9f7e883c5053160cad6dd5ac28140b3",
+                "reference": "153d0531b9f7e883c5053160cad6dd5ac28140b3",
                 "shasum": ""
             },
             "require": {
@@ -6986,13 +7035,13 @@
                 "phar-io/manifest": "^2.0.4",
                 "phar-io/version": "^3.2.1",
                 "php": ">=8.2",
-                "phpunit/php-code-coverage": "^11.0.7",
+                "phpunit/php-code-coverage": "^11.0.8",
                 "phpunit/php-file-iterator": "^5.1.0",
                 "phpunit/php-invoker": "^5.0.1",
                 "phpunit/php-text-template": "^4.0.1",
                 "phpunit/php-timer": "^7.0.1",
                 "sebastian/cli-parser": "^3.0.2",
-                "sebastian/code-unit": "^3.0.1",
+                "sebastian/code-unit": "^3.0.2",
                 "sebastian/comparator": "^6.2.1",
                 "sebastian/diff": "^6.0.2",
                 "sebastian/environment": "^7.2.0",
@@ -7044,7 +7093,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/11.5.1"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/11.5.2"
             },
             "funding": [
                 {
@@ -7060,7 +7109,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-12-11T10:52:48+00:00"
+            "time": "2024-12-21T05:51:08+00:00"
         },
         {
             "name": "sebastian/cli-parser",

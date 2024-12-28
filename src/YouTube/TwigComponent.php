@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\YouTube;
 
-use PhpLlm\LlmChain\Model\Message\MessageBag;
+use PhpLlm\LlmChain\Model\Message\MessageInterface;
 use Psr\Log\LoggerInterface;
 use Symfony\UX\LiveComponent\Attribute\AsLiveComponent;
 use Symfony\UX\LiveComponent\Attribute\LiveAction;
@@ -39,9 +39,12 @@ final class TwigComponent
         }
     }
 
-    public function getMessages(): MessageBag
+    /**
+     * @return MessageInterface[]
+     */
+    public function getMessages(): array
     {
-        return $this->youTube->loadMessages()->withoutSystemMessage();
+        return $this->youTube->loadMessages()->withoutSystemMessage()->getMessages();
     }
 
     #[LiveAction]

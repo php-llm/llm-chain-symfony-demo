@@ -30,9 +30,6 @@ final class Chat
 
     public function start(string $videoId): void
     {
-        $this->reset();
-        $messages = $this->loadMessages();
-
         $transcript = $this->transcriptFetcher->fetchTranscript($videoId);
         $system = <<<PROMPT
             You are an helpful assistant that answers questions about a YouTube video based on a transcript.
@@ -43,9 +40,12 @@ final class Chat
             {$transcript}
             PROMPT;
 
-        $messages[] = Message::forSystem($system);
-        $messages[] = Message::ofAssistant('What do you want to know about that video?');
+        $messages = new MessageBag(
+            Message::forSystem($system),
+            Message::ofAssistant('What do you want to know about that video?'),
+        );
 
+        $this->reset();
         $this->saveMessages($messages);
     }
 
@@ -53,12 +53,12 @@ final class Chat
     {
         $messages = $this->loadMessages();
 
-        $messages[] = Message::ofUser($message);
+        $messages->add(Message::ofUser($message));
         $response = $this->chain->call($messages);
 
         assert($response instanceof TextResponse);
 
-        $messages[] = Message::ofAssistant($response->getContent());
+        $messages->add(Message::ofAssistant($response->getContent()));
 
         $this->saveMessages($messages);
     }

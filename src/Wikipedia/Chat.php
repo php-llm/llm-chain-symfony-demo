@@ -24,8 +24,9 @@ final class Chat
 
     public function loadMessages(): MessageBag
     {
-        $default = new MessageBag();
-        $default[] = Message::forSystem('Please answer the users question based on Wikipedia and provide a link to the article.');
+        $default = new MessageBag(
+            Message::forSystem('Please answer the users question based on Wikipedia and provide a link to the article.')
+        );
 
         return $this->requestStack->getSession()->get(self::SESSION_KEY, $default);
     }
@@ -34,12 +35,12 @@ final class Chat
     {
         $messages = $this->loadMessages();
 
-        $messages[] = Message::ofUser($message);
+        $messages->add(Message::ofUser($message));
         $response = $this->chain->call($messages);
 
         assert($response instanceof TextResponse);
 
-        $messages[] = Message::ofAssistant($response->getContent());
+        $messages->add(Message::ofAssistant($response->getContent()));
 
         $this->saveMessages($messages);
     }

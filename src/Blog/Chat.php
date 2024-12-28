@@ -41,12 +41,12 @@ final class Chat
     {
         $messages = $this->loadMessages();
 
-        $messages[] = Message::ofUser($message);
+        $messages->add(Message::ofUser($message));
         $response = $this->chain->call($messages);
 
         assert($response instanceof TextResponse);
 
-        $messages[] = Message::ofAssistant($response->getContent());
+        $messages->add(Message::ofAssistant($response->getContent()));
 
         $this->saveMessages($messages);
     }

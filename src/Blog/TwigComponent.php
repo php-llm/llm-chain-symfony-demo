@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Blog;
 
-use PhpLlm\LlmChain\Model\Message\MessageBag;
+use PhpLlm\LlmChain\Model\Message\MessageInterface;
 use Symfony\UX\LiveComponent\Attribute\AsLiveComponent;
 use Symfony\UX\LiveComponent\Attribute\LiveAction;
 use Symfony\UX\LiveComponent\Attribute\LiveArg;
@@ -20,9 +20,12 @@ final class TwigComponent
     ) {
     }
 
-    public function getMessages(): MessageBag
+    /**
+     * @return MessageInterface[]
+     */
+    public function getMessages(): array
     {
-        return $this->chat->loadMessages()->withoutSystemMessage();
+        return $this->chat->loadMessages()->withoutSystemMessage()->getMessages();
     }
 
     #[LiveAction]
