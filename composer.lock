@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f1e20cc0cd7de30bb5bf17fe4a3125ed",
+    "content-hash": "361b524e4d42d6082c809c4755d2a03e",
     "packages": [
         {
             "name": "codewithkyrian/chromadb-php",
@@ -591,16 +591,16 @@
         },
         {
             "name": "league/commonmark",
-            "version": "2.6.0",
+            "version": "2.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/commonmark.git",
-                "reference": "d150f911e0079e90ae3c106734c93137c184f932"
+                "reference": "d990688c91cedfb69753ffc2512727ec646df2ad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/d150f911e0079e90ae3c106734c93137c184f932",
-                "reference": "d150f911e0079e90ae3c106734c93137c184f932",
+                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/d990688c91cedfb69753ffc2512727ec646df2ad",
+                "reference": "d990688c91cedfb69753ffc2512727ec646df2ad",
                 "shasum": ""
             },
             "require": {
@@ -694,7 +694,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-12-07T15:34:16+00:00"
+            "time": "2024-12-29T14:10:59+00:00"
         },
         {
             "name": "league/config",
@@ -1226,16 +1226,16 @@
         },
         {
             "name": "php-llm/llm-chain-bundle",
-            "version": "0.11",
+            "version": "0.12.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-llm/llm-chain-bundle.git",
-                "reference": "9ffa8d4e9b01cb8fd58c58182afaef9ec57ff95b"
+                "reference": "f11f24578053ed2d430bf27f89022c6024d6bf09"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-llm/llm-chain-bundle/zipball/9ffa8d4e9b01cb8fd58c58182afaef9ec57ff95b",
-                "reference": "9ffa8d4e9b01cb8fd58c58182afaef9ec57ff95b",
+                "url": "https://api.github.com/repos/php-llm/llm-chain-bundle/zipball/f11f24578053ed2d430bf27f89022c6024d6bf09",
+                "reference": "f11f24578053ed2d430bf27f89022c6024d6bf09",
                 "shasum": ""
             },
             "require": {
@@ -1269,9 +1269,9 @@
             "description": "Symfony integration bundle for php-llm/llm-chain",
             "support": {
                 "issues": "https://github.com/php-llm/llm-chain-bundle/issues",
-                "source": "https://github.com/php-llm/llm-chain-bundle/tree/0.11"
+                "source": "https://github.com/php-llm/llm-chain-bundle/tree/0.12.0"
             },
-            "time": "2024-12-28T23:08:43+00:00"
+            "time": "2024-12-30T16:17:45+00:00"
         },
         {
             "name": "phpdocumentor/reflection-common",
@@ -6000,7 +6000,7 @@
         },
         {
             "name": "twig/extra-bundle",
-            "version": "v3.17.0",
+            "version": "v3.18.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/twig-extra-bundle.git",
@@ -6058,7 +6058,7 @@
                 "twig"
             ],
             "support": {
-                "source": "https://github.com/twigphp/twig-extra-bundle/tree/v3.17.0"
+                "source": "https://github.com/twigphp/twig-extra-bundle/tree/v3.18.0"
             },
             "funding": [
                 {
@@ -6074,7 +6074,7 @@
         },
         {
             "name": "twig/markdown-extra",
-            "version": "v3.17.0",
+            "version": "v3.18.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/markdown-extra.git",
@@ -6130,7 +6130,7 @@
                 "twig"
             ],
             "support": {
-                "source": "https://github.com/twigphp/markdown-extra/tree/v3.17.0"
+                "source": "https://github.com/twigphp/markdown-extra/tree/v3.18.0"
             },
             "funding": [
                 {
@@ -6146,16 +6146,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v3.17.1",
+            "version": "v3.18.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "677ef8da6497a03048192aeeb5aa3018e379ac71"
+                "reference": "acffa88cc2b40dbe42eaf3a5025d6c0d4600cc50"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/677ef8da6497a03048192aeeb5aa3018e379ac71",
-                "reference": "677ef8da6497a03048192aeeb5aa3018e379ac71",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/acffa88cc2b40dbe42eaf3a5025d6c0d4600cc50",
+                "reference": "acffa88cc2b40dbe42eaf3a5025d6c0d4600cc50",
                 "shasum": ""
             },
             "require": {
@@ -6210,7 +6210,7 @@
             ],
             "support": {
                 "issues": "https://github.com/twigphp/Twig/issues",
-                "source": "https://github.com/twigphp/Twig/tree/v3.17.1"
+                "source": "https://github.com/twigphp/Twig/tree/v3.18.0"
             },
             "funding": [
                 {
@@ -6222,7 +6222,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-12-12T09:58:10+00:00"
+            "time": "2024-12-29T10:51:50+00:00"
         },
         {
             "name": "webmozart/assert",
@@ -6346,16 +6346,16 @@
         },
         {
             "name": "nikic/php-parser",
-            "version": "v5.3.1",
+            "version": "v5.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "8eea230464783aa9671db8eea6f8c6ac5285794b"
+                "reference": "447a020a1f875a434d62f2a401f53b82a396e494"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/8eea230464783aa9671db8eea6f8c6ac5285794b",
-                "reference": "8eea230464783aa9671db8eea6f8c6ac5285794b",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/447a020a1f875a434d62f2a401f53b82a396e494",
+                "reference": "447a020a1f875a434d62f2a401f53b82a396e494",
                 "shasum": ""
             },
             "require": {
@@ -6398,9 +6398,9 @@
             ],
             "support": {
                 "issues": "https://github.com/nikic/PHP-Parser/issues",
-                "source": "https://github.com/nikic/PHP-Parser/tree/v5.3.1"
+                "source": "https://github.com/nikic/PHP-Parser/tree/v5.4.0"
             },
-            "time": "2024-10-08T18:51:32+00:00"
+            "time": "2024-12-30T11:07:19+00:00"
         },
         {
             "name": "nyholm/nsa",
@@ -6579,16 +6579,16 @@
         },
         {
             "name": "php-cs-fixer/shim",
-            "version": "v3.65.0",
+            "version": "v3.66.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHP-CS-Fixer/shim.git",
-                "reference": "4983ec79b9dee926695ac324ea6e8d291935525d"
+                "reference": "6824b91b16d2e123afed9bf9c96ec283882346c9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHP-CS-Fixer/shim/zipball/4983ec79b9dee926695ac324ea6e8d291935525d",
-                "reference": "4983ec79b9dee926695ac324ea6e8d291935525d",
+                "url": "https://api.github.com/repos/PHP-CS-Fixer/shim/zipball/6824b91b16d2e123afed9bf9c96ec283882346c9",
+                "reference": "6824b91b16d2e123afed9bf9c96ec283882346c9",
                 "shasum": ""
             },
             "require": {
@@ -6625,9 +6625,9 @@
             "description": "A tool to automatically fix PHP code style",
             "support": {
                 "issues": "https://github.com/PHP-CS-Fixer/shim/issues",
-                "source": "https://github.com/PHP-CS-Fixer/shim/tree/v3.65.0"
+                "source": "https://github.com/PHP-CS-Fixer/shim/tree/v3.66.0"
             },
-            "time": "2024-11-25T00:39:41+00:00"
+            "time": "2024-12-29T13:46:48+00:00"
         },
         {
             "name": "phpstan/phpstan",

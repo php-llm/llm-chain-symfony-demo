@@ -27,7 +27,7 @@ llm_chain:
             model:
                 name: 'GPT'
                 version: 'gpt-4o-mini'
-            tools: []
+            tools: false
         wikipedia:
             model:
                 name: 'GPT'
