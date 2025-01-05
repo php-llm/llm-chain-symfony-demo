@@ -34,6 +34,7 @@ llm_chain:
                 version: 'gpt-4o-mini'
                 options:
                     temperature: 0.5
+            system_prompt: 'Please answer the users question based on Wikipedia and provide a link to the article.'
             tools:
                 - 'PhpLlm\LlmChain\Chain\ToolBox\Tool\Wikipedia'
     store:

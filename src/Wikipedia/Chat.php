@@ -24,11 +24,7 @@ final class Chat
 
     public function loadMessages(): MessageBag
     {
-        $default = new MessageBag(
-            Message::forSystem('Please answer the users question based on Wikipedia and provide a link to the article.')
-        );
-
-        return $this->requestStack->getSession()->get(self::SESSION_KEY, $default);
+        return $this->requestStack->getSession()->get(self::SESSION_KEY, new MessageBag());
     }
 
     public function submitMessage(string $message): void
