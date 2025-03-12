@@ -37,6 +37,12 @@ llm_chain:
             system_prompt: 'Please answer the users question based on Wikipedia and provide a link to the article.'
             tools:
                 - 'PhpLlm\LlmChain\Chain\ToolBox\Tool\Wikipedia'
+        audio:
+            model:
+                name: 'GPT'
+                version: 'gpt-4o-mini'
+            system_prompt: 'You are a friendly chatbot that likes to have a conversation with users and asks them some questions.'
+            tools: false
     store:
         chroma_db:
             symfonycon:

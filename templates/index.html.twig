@@ -13,7 +13,7 @@
         </p>
         <h3 class="text-dark">Examples</h3>
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <div class="card blog bg-body shadow-sm">
                     <div class="card-img-top py-2">
                         {{ ux_icon('mdi:symfony', { height: '150px', width: '150px' }) }}
@@ -32,14 +32,14 @@
                     {% endif %}
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <div class="card youtube bg-body shadow-sm">
                     <div class="card-img-top py-2">
                         {{ ux_icon('bi:youtube', { height: '150px', width: '150px' }) }}
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">YouTube Transcript Bot</h5>
-                        <p class="card-text">Question answering initialized with transcript of YouTube video.</p>
+                        <p class="card-text">Question answering started with a YouTube video ID which gets converted into a transcript.</p>
                         <a href="{{ path('youtube') }}" class="btn btn-outline-dark d-block">Try YouTube Transcript Bot</a>
                     </div>
                     {# Profiler route only available in dev #}
@@ -51,14 +51,14 @@
                     {% endif %}
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <div class="card wikipedia bg-body shadow-sm">
                     <div class="card-img-top py-2">
                         {{ ux_icon('mdi:wikipedia', { height: '150px', width: '150px' }) }}
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">Wikipedia Research Bot</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <p class="card-text">A chatbot equipped with tools to search and read on Wikipedia about topics the user asks for.</p>
                         <a href="{{ path('wikipedia') }}" class="btn btn-outline-dark d-block">Try Wikipedia Research Bot</a>
                     </div>
                     {# Profiler route only available in dev #}
@@ -66,6 +66,25 @@
                         <div class="card-footer">
                             {{ ux_icon('solar:code-linear', { height: '20px', width: '20px' }) }}
                             <a href="{{ path('_profiler_open_file', { file: 'src/Wikipedia/Chat.php', line: 14 }) }}">See Implementation</a>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card audio bg-body shadow-sm">
+                    <div class="card-img-top py-2">
+                        {{ ux_icon('iconoir:microphone-solid', { height: '150px', width: '150px' }) }}
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Audio Bot</h5>
+                        <p class="card-text">Simple demonstration of text-to-speech with Whisper in combination with GPT.</p>
+                        <a href="{{ path('audio') }}" class="btn btn-outline-dark d-block">Try Audio Bot</a>
+                    </div>
+                    {# Profiler route only available in dev #}
+                    {% if 'dev' == app.environment %}
+                        <div class="card-footer">
+                            {{ ux_icon('solar:code-linear', { height: '20px', width: '20px' }) }}
+                            <a href="{{ path('_profiler_open_file', { file: 'src/Audio/Chat.php', line: 14 }) }}">See Implementation</a>
                         </div>
                     {% endif %}
                 </div>

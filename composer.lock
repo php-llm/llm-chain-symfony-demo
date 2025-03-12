@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1e758ae89d7b6866084eae0528ab851b",
+    "content-hash": "a22ceb12255d2617d5c64f93df0ee8b8",
     "packages": [
         {
             "name": "codewithkyrian/chromadb-php",
@@ -1146,16 +1146,16 @@
         },
         {
             "name": "php-llm/llm-chain",
-            "version": "0.17.0",
+            "version": "0.18.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-llm/llm-chain.git",
-                "reference": "6e374148d0e31240ac57a679ab889d95ac629389"
+                "reference": "6a5dbe767ed05512cd82cf7cab2d2f14aed5ef3c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-llm/llm-chain/zipball/6e374148d0e31240ac57a679ab889d95ac629389",
-                "reference": "6e374148d0e31240ac57a679ab889d95ac629389",
+                "url": "https://api.github.com/repos/php-llm/llm-chain/zipball/6a5dbe767ed05512cd82cf7cab2d2f14aed5ef3c",
+                "reference": "6a5dbe767ed05512cd82cf7cab2d2f14aed5ef3c",
                 "shasum": ""
             },
             "require": {
@@ -1225,27 +1225,27 @@
             "description": "A slim PHP component with tooling around LLMs.",
             "support": {
                 "issues": "https://github.com/php-llm/llm-chain/issues",
-                "source": "https://github.com/php-llm/llm-chain/tree/0.17.0"
+                "source": "https://github.com/php-llm/llm-chain/tree/0.18.0"
             },
-            "time": "2025-03-07T09:29:46+00:00"
+            "time": "2025-03-13T23:29:22+00:00"
         },
         {
             "name": "php-llm/llm-chain-bundle",
-            "version": "0.17.0",
+            "version": "0.18.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-llm/llm-chain-bundle.git",
-                "reference": "48e18502b7a90ee9e83db8e0a90adf7a11d93d04"
+                "reference": "53fdc4eb706501a921322aa717b05d28166ec874"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-llm/llm-chain-bundle/zipball/48e18502b7a90ee9e83db8e0a90adf7a11d93d04",
-                "reference": "48e18502b7a90ee9e83db8e0a90adf7a11d93d04",
+                "url": "https://api.github.com/repos/php-llm/llm-chain-bundle/zipball/53fdc4eb706501a921322aa717b05d28166ec874",
+                "reference": "53fdc4eb706501a921322aa717b05d28166ec874",
                 "shasum": ""
             },
             "require": {
                 "php": ">=8.2",
-                "php-llm/llm-chain": "^0.17",
+                "php-llm/llm-chain": "^0.18",
                 "symfony/config": "^6.4 || ^7.0",
                 "symfony/dependency-injection": "^6.4 || ^7.0",
                 "symfony/framework-bundle": "^6.4 || ^7.0",
@@ -1280,9 +1280,9 @@
             "description": "Symfony integration bundle for php-llm/llm-chain",
             "support": {
                 "issues": "https://github.com/php-llm/llm-chain-bundle/issues",
-                "source": "https://github.com/php-llm/llm-chain-bundle/tree/0.17.0"
+                "source": "https://github.com/php-llm/llm-chain-bundle/tree/0.18.0"
             },
-            "time": "2025-03-07T10:14:27+00:00"
+            "time": "2025-03-13T23:47:22+00:00"
         },
         {
             "name": "phpdocumentor/reflection-common",
@@ -6591,16 +6591,16 @@
         },
         {
             "name": "php-cs-fixer/shim",
-            "version": "v3.70.2",
+            "version": "v3.72.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHP-CS-Fixer/shim.git",
-                "reference": "ff041542719ad3be54bd34647d0fd5bc7900115e"
+                "reference": "f5131b7a7d0103919a1b478a2763bd76c98e472e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHP-CS-Fixer/shim/zipball/ff041542719ad3be54bd34647d0fd5bc7900115e",
-                "reference": "ff041542719ad3be54bd34647d0fd5bc7900115e",
+                "url": "https://api.github.com/repos/PHP-CS-Fixer/shim/zipball/f5131b7a7d0103919a1b478a2763bd76c98e472e",
+                "reference": "f5131b7a7d0103919a1b478a2763bd76c98e472e",
                 "shasum": ""
             },
             "require": {
@@ -6637,22 +6637,22 @@
             "description": "A tool to automatically fix PHP code style",
             "support": {
                 "issues": "https://github.com/PHP-CS-Fixer/shim/issues",
-                "source": "https://github.com/PHP-CS-Fixer/shim/tree/v3.70.2"
+                "source": "https://github.com/PHP-CS-Fixer/shim/tree/v3.72.0"
             },
-            "time": "2025-03-03T21:07:46+00:00"
+            "time": "2025-03-13T11:26:00+00:00"
         },
         {
             "name": "phpstan/phpstan",
-            "version": "2.1.7",
+            "version": "2.1.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "12567f91a74036d56ba0af6d56c8e73ac0e8d850"
+                "reference": "f9adff3b87c03b12cc7e46a30a524648e497758f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/12567f91a74036d56ba0af6d56c8e73ac0e8d850",
-                "reference": "12567f91a74036d56ba0af6d56c8e73ac0e8d850",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/f9adff3b87c03b12cc7e46a30a524648e497758f",
+                "reference": "f9adff3b87c03b12cc7e46a30a524648e497758f",
                 "shasum": ""
             },
             "require": {
@@ -6697,7 +6697,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-03-05T13:43:55+00:00"
+            "time": "2025-03-09T09:30:48+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",

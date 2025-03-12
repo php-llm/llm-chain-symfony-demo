@@ -9,7 +9,7 @@
         "ext-iconv": "*",
         "codewithkyrian/chromadb-php": "^0.3.0",
         "league/commonmark": "^2.6",
-        "php-llm/llm-chain-bundle": "^0.17",
+        "php-llm/llm-chain-bundle": "^0.18",
         "runtime/frankenphp-symfony": "^0.2.0",
         "symfony/asset": "7.2.*",
         "symfony/asset-mapper": "7.2.*",

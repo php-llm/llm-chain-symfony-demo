@@ -21,7 +21,7 @@ final class SmokeTest extends WebTestCase
 
         self::assertResponseIsSuccessful();
         self::assertSelectorTextSame('h1', 'Welcome to the LLM Chain Demo');
-        self::assertSelectorCount(3, '.card');
+        self::assertSelectorCount(4, '.card');
     }
 
     #[DataProvider('provideChats')]
