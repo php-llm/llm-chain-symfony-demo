@@ -59,6 +59,7 @@ export default class extends Controller {
 
         this.mediaRecorder.onstop = async () => {
             const audioBlob = new Blob(audioChunks, {type: 'audio/wav'});
+            this.mediaRecorder.stream.getAudioTracks().forEach(track => track.stop());
 
             const base64String = await this.blobToBase64(audioBlob);
             this.component.action('submit', { audio: base64String });
@@ -78,12 +79,5 @@ export default class extends Controller {
             reader.readAsDataURL(blob);
             reader.onloadend = () => resolve(reader.result.split(',')[1]);
         });
-    }
-
-    playBase64Audio(base64String) {
-        const audioSrc = "data:audio/wav;base64," + base64String;
-        const audio = new Audio(audioSrc);
-
-        audio.play().catch(error => console.error("Playback error:", error));
     }
 }

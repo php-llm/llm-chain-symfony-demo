@@ -12,6 +12,10 @@
         .user-message {
             background: #df662f;
             color: #ffffff;
+
+            #loading-message & {
+                color: rgba(255, 255, 255, 0.7);
+            }
         }
 
         .bot-message {
@@ -56,6 +60,14 @@
                 background: #a80a1d;
                 border-color: #a80a1d;
             }
+        }
+    }
+
+    footer {
+        color: #ffffff;
+
+        a {
+            color: #ffffff;
         }
     }
 }

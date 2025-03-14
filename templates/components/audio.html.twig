@@ -17,7 +17,7 @@
             </div>
         {% endfor %}
         <div id="loading-message" class="d-none">
-            {{ message.user([{text:''}]) }}
+            {{ message.user([{text:'Converting your speech to text ...'}], true) }}
             {{ message.bot('The Bot is looking for an answer ...', true) }}
         </div>
     </div>

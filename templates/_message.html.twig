@@ -33,11 +33,17 @@
     </div>
 {% endmacro %}
 
-{% macro user(content) %}
+{% macro user(content, loading = false) %}
     <div class="d-flex align-items-baseline text-end justify-content-end mb-4">
         <div class="pe-2">
             {% for item in content %}
-                <div class="user-message d-inline-block p-2 px-3 m-1 border border-light-subtle shadow-sm">{{ item.text }}</div>
+                <div class="user-message d-inline-block p-2 px-3 m-1 border border-light-subtle shadow-sm">
+                    {% if loading %}
+                        <span class="spinner-border spinner-border-sm me-1"></span><i>{{ item.text }}</i>
+                    {% else %}
+                        {{ item.text }}
+                    {% endif %}
+                </div>
             {% endfor %}
         </div>
         <div class="user avatar rounded-3 shadow-sm">
