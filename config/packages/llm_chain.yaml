@@ -39,6 +39,7 @@ llm_chain:
                 options:
                     temperature: 0.5
             system_prompt: 'Please answer the users question based on Wikipedia and provide a link to the article.'
+            include_tools: true
             tools:
                 - 'PhpLlm\LlmChain\Chain\Toolbox\Tool\Wikipedia'
         audio:
