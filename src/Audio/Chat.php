@@ -7,6 +7,7 @@ namespace App\Audio;
 use PhpLlm\LlmChain\Bridge\OpenAI\Whisper;
 use PhpLlm\LlmChain\Bridge\OpenAI\Whisper\File;
 use PhpLlm\LlmChain\ChainInterface;
+use PhpLlm\LlmChain\Model\Message\Content\Audio;
 use PhpLlm\LlmChain\Model\Message\Message;
 use PhpLlm\LlmChain\Model\Message\MessageBag;
 use PhpLlm\LlmChain\Model\Response\AsyncResponse;
@@ -33,7 +34,7 @@ final class Chat
         $path = tempnam(sys_get_temp_dir(), 'audio-').'.wav';
         file_put_contents($path, base64_decode($base64audio));
 
-        $response = $this->platform->request(new Whisper(), new File($path));
+        $response = $this->platform->request(new Whisper(), Audio::fromFile($path));
         assert($response instanceof AsyncResponse);
         $response = $response->unwrap();
         assert($response instanceof TextResponse);
