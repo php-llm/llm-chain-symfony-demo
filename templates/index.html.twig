@@ -13,7 +13,7 @@
         </p>
         <h3 class="text-dark">Examples</h3>
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <div class="card blog bg-body shadow-sm">
                     <div class="card-img-top py-2">
                         {{ ux_icon('mdi:symfony', { height: '150px', width: '150px' }) }}
@@ -32,7 +32,7 @@
                     {% endif %}
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <div class="card youtube bg-body shadow-sm">
                     <div class="card-img-top py-2">
                         {{ ux_icon('bi:youtube', { height: '150px', width: '150px' }) }}
@@ -51,7 +51,7 @@
                     {% endif %}
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <div class="card wikipedia bg-body shadow-sm">
                     <div class="card-img-top py-2">
                         {{ ux_icon('mdi:wikipedia', { height: '150px', width: '150px' }) }}
@@ -70,14 +70,17 @@
                     {% endif %}
                 </div>
             </div>
-            <div class="col-md-3">
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-2"></div>
+            <div class="col-md-4">
                 <div class="card audio bg-body shadow-sm">
                     <div class="card-img-top py-2">
                         {{ ux_icon('iconoir:microphone-solid', { height: '150px', width: '150px' }) }}
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">Audio Bot</h5>
-                        <p class="card-text">Simple demonstration of text-to-speech with Whisper in combination with GPT.</p>
+                        <p class="card-text">Simple demonstration of speech-to-text with Whisper in combination with GPT.</p>
                         <a href="{{ path('audio') }}" class="btn btn-outline-dark d-block">Try Audio Bot</a>
                     </div>
                     {# Profiler route only available in dev #}
@@ -89,6 +92,26 @@
                     {% endif %}
                 </div>
             </div>
+            <div class="col-md-4">
+                <div class="card video bg-body shadow-sm">
+                    <div class="card-img-top py-2">
+                        {{ ux_icon('tabler:video-filled', { height: '150px', width: '150px' }) }}
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Video Bot</h5>
+                        <p class="card-text">Simple demonstration of vision capabilities of GPT in combination with your webcam.</p>
+                        <a href="{{ path('video') }}" class="btn btn-outline-dark d-block">Try Video Bot</a>
+                    </div>
+                    {# Profiler route only available in dev #}
+                    {% if 'dev' == app.environment %}
+                        <div class="card-footer">
+                            {{ ux_icon('solar:code-linear', { height: '20px', width: '20px' }) }}
+                            <a href="{{ path('_profiler_open_file', { file: 'src/Video/TwigComponent.php', line: 37 }) }}">See Implementation</a>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="col-md-2"></div>
         </div>
     </div>
 {% endblock %}

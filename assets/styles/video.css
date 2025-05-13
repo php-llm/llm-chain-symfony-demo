@@ -1,0 +1,27 @@
+.video {
+    body&, .card-img-top {
+        background: #26931e;
+        background: linear-gradient(0deg, #186361 0%, #26931e 100%);
+    }
+
+    .card-img-top {
+        color: #ffffff;
+    }
+
+    &.chat {
+        #chat-submit {
+            &:hover {
+                background: #186361;
+                border-color: #186361;
+            }
+        }
+    }
+
+    footer {
+        color: #ffffff;
+
+        a {
+            color: #ffffff;
+        }
+    }
+}

@@ -1,0 +1,23 @@
+{% import "_message.html.twig" as message %}
+
+<div class="card mx-auto shadow-lg" {{ attributes.defaults(stimulus_controller('video')) }}>
+    <div class="card-header p-2">
+        {{ ux_icon('tabler:video-filled', { height: '32px', width: '32px' }) }}
+        <strong class="ms-1 pt-1 d-inline-block">Video Bot</strong>
+    </div>
+    <div id="chat-body" class="card-body p-2 overflow-auto">
+        <div id="welcome" class="text-center mt-5 p-4 bg-white rounded-5 shadow-sm w-75 mx-auto">
+            <div class="mb-2">
+                <video id="videoFeed" autoplay playsinline></video>
+            </div>
+            <canvas id="canvas" class="d-none"></canvas>
+            <i class="text-muted">{{ this.caption }}</i>
+        </div>
+    </div>
+    <div class="card-footer p-2">
+        <div class="input-group">
+            <input id="chat-message" type="text" class="form-control border-0" placeholder="What do you see?">
+            <button id="chat-submit" class="btn btn-outline-secondary border-0" type="button">{{ ux_icon('mingcute:send-fill', { height: '25px', width: '25px' }) }} Submit</button>
+        </div>
+    </div>
+</div>
