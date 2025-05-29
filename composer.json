@@ -7,7 +7,7 @@
         "php": ">=8.4",
         "ext-ctype": "*",
         "ext-iconv": "*",
-        "codewithkyrian/chromadb-php": "^0.3.0",
+        "codewithkyrian/chromadb-php": "^0.4.0",
         "league/commonmark": "^2.7",
         "php-llm/llm-chain-bundle": "^0.20.2",
         "runtime/frankenphp-symfony": "^0.2.0",

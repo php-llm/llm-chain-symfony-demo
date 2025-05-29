@@ -3,14 +3,9 @@ services:
     image: dunglas/frankenphp
     volumes:
       - ./:/app
-      - caddy_data:/data
-      - caddy_config:/config
     ports:
       - 443:443
     tty: true
-    environment:
-      - FRANKENPHP_CONFIG="worker ./public/index.php"
-      - APP_RUNTIME=Runtime\FrankenPhpSymfony\Runtime
 
   composer:
     image: composer:latest
@@ -18,14 +13,10 @@ services:
       - ./:/app
 
   chromadb:
-    image: chromadb/chroma:latest
+    image: chromadb/chroma:0.5.23
     volumes:
       - ./chromadb:/chroma/chroma
     environment:
       - IS_PERSISTENT=TRUE
       - PERSIST_DIRECTORY=/chroma/chroma # this is the default path, change it as needed
       - ANONYMIZED_TELEMETRY=FALSE
-
-volumes:
-  caddy_data:
-  caddy_config:
