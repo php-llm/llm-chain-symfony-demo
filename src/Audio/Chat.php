@@ -4,15 +4,14 @@ declare(strict_types=1);
 
 namespace App\Audio;
 
-use PhpLlm\LlmChain\Bridge\OpenAI\Whisper;
-use PhpLlm\LlmChain\Bridge\OpenAI\Whisper\File;
-use PhpLlm\LlmChain\ChainInterface;
-use PhpLlm\LlmChain\Model\Message\Content\Audio;
-use PhpLlm\LlmChain\Model\Message\Message;
-use PhpLlm\LlmChain\Model\Message\MessageBag;
-use PhpLlm\LlmChain\Model\Response\AsyncResponse;
-use PhpLlm\LlmChain\Model\Response\TextResponse;
-use PhpLlm\LlmChain\PlatformInterface;
+use PhpLlm\LlmChain\Chain\ChainInterface;
+use PhpLlm\LlmChain\Platform\Bridge\OpenAI\Whisper;
+use PhpLlm\LlmChain\Platform\Message\Content\Audio;
+use PhpLlm\LlmChain\Platform\Message\Message;
+use PhpLlm\LlmChain\Platform\Message\MessageBag;
+use PhpLlm\LlmChain\Platform\PlatformInterface;
+use PhpLlm\LlmChain\Platform\Response\AsyncResponse;
+use PhpLlm\LlmChain\Platform\Response\TextResponse;
 use Symfony\Component\DependencyInjection\Attribute\Autowire;
 use Symfony\Component\HttpFoundation\RequestStack;
 

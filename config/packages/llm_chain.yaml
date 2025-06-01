@@ -60,5 +60,6 @@ services:
     # PhpLlm\LlmChain\Chain\Toolbox\Tool\SerpApi:
     #     $apiKey: '%env(SERP_API_KEY)%'
     PhpLlm\LlmChain\Chain\Toolbox\Tool\Wikipedia: ~
-    PhpLlm\LlmChain\Chain\Toolbox\Tool\SimilaritySearch: ~
+    PhpLlm\LlmChain\Chain\Toolbox\Tool\SimilaritySearch:
+        $model: '@llm_chain.embedder.default.model'
 

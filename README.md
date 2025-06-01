@@ -37,8 +37,8 @@ The setup is split into three parts, the Symfony application, the OpenAI configu
 Checkout the repository, start the docker environment and install dependencies:
 
 ```shell
-git clone git@github.com:php-llm/symfony-demo.git
-cd symfony-demo
+git clone git@github.com:php-llm/llm-chain-symfony-demo.git
+cd llm-chain-symfony-demo
 docker compose up -d
 docker compose run composer install
 ```

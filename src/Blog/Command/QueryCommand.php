@@ -5,10 +5,10 @@ declare(strict_types=1);
 namespace App\Blog\Command;
 
 use Codewithkyrian\ChromaDB\Client;
-use PhpLlm\LlmChain\Bridge\OpenAI\Embeddings;
-use PhpLlm\LlmChain\Model\Response\AsyncResponse;
-use PhpLlm\LlmChain\Model\Response\VectorResponse;
-use PhpLlm\LlmChain\PlatformInterface;
+use PhpLlm\LlmChain\Platform\Bridge\OpenAI\Embeddings;
+use PhpLlm\LlmChain\Platform\PlatformInterface;
+use PhpLlm\LlmChain\Platform\Response\AsyncResponse;
+use PhpLlm\LlmChain\Platform\Response\VectorResponse;
 use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;

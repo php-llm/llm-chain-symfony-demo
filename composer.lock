@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8a4c1809f2836580a081189226994f7b",
+    "content-hash": "77581522a522ad0ebf6540fa79d0e10a",
     "packages": [
         {
             "name": "codewithkyrian/chromadb-php",
@@ -1152,16 +1152,16 @@
         },
         {
             "name": "php-llm/llm-chain",
-            "version": "0.20.0",
+            "version": "0.22.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-llm/llm-chain.git",
-                "reference": "6b6d8f1fc73b98e1e3281b1619c39da31921e35a"
+                "reference": "c27618db1646b46ae9524b356bb5561b56f04027"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-llm/llm-chain/zipball/6b6d8f1fc73b98e1e3281b1619c39da31921e35a",
-                "reference": "6b6d8f1fc73b98e1e3281b1619c39da31921e35a",
+                "url": "https://api.github.com/repos/php-llm/llm-chain/zipball/c27618db1646b46ae9524b356bb5561b56f04027",
+                "reference": "c27618db1646b46ae9524b356bb5561b56f04027",
                 "shasum": ""
             },
             "require": {
@@ -1185,11 +1185,13 @@
                 "mongodb/mongodb": "<1.21"
             },
             "require-dev": {
-                "codewithkyrian/chromadb-php": "^0.2.1 || ^0.3",
+                "async-aws/bedrock-runtime": "^0.1.0",
+                "codewithkyrian/chromadb-php": "^0.2.1 || ^0.3 || ^0.4",
                 "codewithkyrian/transformers": "^0.5.3",
                 "mongodb/mongodb": "^1.21",
                 "php-cs-fixer/shim": "^3.70",
                 "phpstan/phpstan": "^2.0",
+                "phpstan/phpstan-symfony": "^2.0",
                 "phpstan/phpstan-webmozart-assert": "^2.0",
                 "phpunit/phpunit": "^11.5",
                 "probots-io/pinecone-php": "^1.0",
@@ -1204,6 +1206,7 @@
                 "symfony/var-dumper": "^6.4 || ^7.1"
             },
             "suggest": {
+                "async-aws/bedrock-runtime": "For using the Bedrock platform.",
                 "codewithkyrian/chromadb-php": "For using the ChromaDB as retrieval vector store.",
                 "codewithkyrian/transformers": "For using the TransformersPHP with FFI to run models in PHP.",
                 "mongodb/mongodb": "For using MongoDB Atlas as retrieval vector store.",
@@ -1231,30 +1234,36 @@
                     "email": "oskarstark@googlemail.com"
                 }
             ],
-            "description": "A slim PHP component with tooling around LLMs.",
+            "description": "PHP library for building LLM-based and AI-based features and applications.",
+            "keywords": [
+                "ai",
+                "huggingface",
+                "llm",
+                "transformers"
+            ],
             "support": {
                 "issues": "https://github.com/php-llm/llm-chain/issues",
-                "source": "https://github.com/php-llm/llm-chain/tree/0.20.0"
+                "source": "https://github.com/php-llm/llm-chain/tree/0.22.0"
             },
-            "time": "2025-04-18T22:42:24+00:00"
+            "time": "2025-06-01T13:51:19+00:00"
         },
         {
             "name": "php-llm/llm-chain-bundle",
-            "version": "0.20.2",
+            "version": "0.22.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-llm/llm-chain-bundle.git",
-                "reference": "345ad7075c7fa9fce9de9c3829cfede445ff9f5b"
+                "reference": "e83812e10daa443598c5e577963e8b010213446d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-llm/llm-chain-bundle/zipball/345ad7075c7fa9fce9de9c3829cfede445ff9f5b",
-                "reference": "345ad7075c7fa9fce9de9c3829cfede445ff9f5b",
+                "url": "https://api.github.com/repos/php-llm/llm-chain-bundle/zipball/e83812e10daa443598c5e577963e8b010213446d",
+                "reference": "e83812e10daa443598c5e577963e8b010213446d",
                 "shasum": ""
             },
             "require": {
                 "php": ">=8.2",
-                "php-llm/llm-chain": "^0.20",
+                "php-llm/llm-chain": "^0.22",
                 "symfony/config": "^6.4 || ^7.0",
                 "symfony/dependency-injection": "^6.4 || ^7.0",
                 "symfony/framework-bundle": "^6.4 || ^7.0",
@@ -1289,9 +1298,9 @@
             "description": "Symfony integration bundle for php-llm/llm-chain",
             "support": {
                 "issues": "https://github.com/php-llm/llm-chain-bundle/issues",
-                "source": "https://github.com/php-llm/llm-chain-bundle/tree/0.20.2"
+                "source": "https://github.com/php-llm/llm-chain-bundle/tree/0.22.0"
             },
-            "time": "2025-05-13T21:51:14+00:00"
+            "time": "2025-06-01T20:53:32+00:00"
         },
         {
             "name": "phpdocumentor/reflection-common",
@@ -6385,16 +6394,16 @@
         },
         {
             "name": "nikic/php-parser",
-            "version": "v5.4.0",
+            "version": "v5.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "447a020a1f875a434d62f2a401f53b82a396e494"
+                "reference": "ae59794362fe85e051a58ad36b289443f57be7a9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/447a020a1f875a434d62f2a401f53b82a396e494",
-                "reference": "447a020a1f875a434d62f2a401f53b82a396e494",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/ae59794362fe85e051a58ad36b289443f57be7a9",
+                "reference": "ae59794362fe85e051a58ad36b289443f57be7a9",
                 "shasum": ""
             },
             "require": {
@@ -6437,9 +6446,9 @@
             ],
             "support": {
                 "issues": "https://github.com/nikic/PHP-Parser/issues",
-                "source": "https://github.com/nikic/PHP-Parser/tree/v5.4.0"
+                "source": "https://github.com/nikic/PHP-Parser/tree/v5.5.0"
             },
-            "time": "2024-12-30T11:07:19+00:00"
+            "time": "2025-05-31T08:24:38+00:00"
         },
         {
             "name": "nyholm/nsa",
@@ -8497,7 +8506,7 @@
     },
     "platform-dev": {},
     "platform-overrides": {
-        "php": "8.4.1"
+        "php": "8.4.7"
     },
     "plugin-api-version": "2.6.0"
 }
