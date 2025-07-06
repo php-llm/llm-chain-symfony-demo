@@ -6,13 +6,13 @@ namespace App\Blog;
 
 use PhpLlm\LlmChain\Store\Document\Metadata;
 use PhpLlm\LlmChain\Store\Document\TextDocument;
-use PhpLlm\LlmChain\Store\Embedder as LlmChainEmbedder;
+use PhpLlm\LlmChain\Store\Indexer;
 
 final readonly class Embedder
 {
     public function __construct(
         private FeedLoader $loader,
-        private LlmChainEmbedder $embedder,
+        private Indexer $indexer,
     ) {
     }
 
@@ -23,6 +23,6 @@ final readonly class Embedder
             $documents[] = new TextDocument($post->id, $post->toString(), new Metadata($post->toArray()));
         }
 
-        $this->embedder->embed($documents);
+        $this->indexer->index($documents);
     }
 }

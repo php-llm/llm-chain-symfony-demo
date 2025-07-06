@@ -9,8 +9,6 @@ use PhpLlm\LlmChain\Platform\Message\Content\Image;
 use PhpLlm\LlmChain\Platform\Message\Message;
 use PhpLlm\LlmChain\Platform\Message\MessageBag;
 use PhpLlm\LlmChain\Platform\PlatformInterface;
-use PhpLlm\LlmChain\Platform\Response\AsyncResponse;
-use PhpLlm\LlmChain\Platform\Response\TextResponse;
 use Symfony\UX\LiveComponent\Attribute\AsLiveComponent;
 use Symfony\UX\LiveComponent\Attribute\LiveAction;
 use Symfony\UX\LiveComponent\Attribute\LiveArg;
@@ -46,10 +44,6 @@ final class TwigComponent
             'max_tokens' => 100,
         ]);
 
-        assert($response instanceof AsyncResponse);
-        $response = $response->unwrap();
-        assert($response instanceof TextResponse);
-
-        $this->caption = $response->getContent();
+        $this->caption = $response->asText();
     }
 }
