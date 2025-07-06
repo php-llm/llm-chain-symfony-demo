@@ -44,7 +44,7 @@ llm_chain:
         chroma_db:
             symfonycon:
                 collection: 'symfony_blog'
-    embedder:
+    indexer:
         default:
             model:
                 name: 'Embeddings'
@@ -61,5 +61,5 @@ services:
     #     $apiKey: '%env(SERP_API_KEY)%'
     PhpLlm\LlmChain\Chain\Toolbox\Tool\Wikipedia: ~
     PhpLlm\LlmChain\Chain\Toolbox\Tool\SimilaritySearch:
-        $model: '@llm_chain.embedder.default.model'
+        $model: '@llm_chain.indexer.default.model'
 

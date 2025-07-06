@@ -10,7 +10,6 @@ use PhpLlm\LlmChain\Platform\Message\Content\Audio;
 use PhpLlm\LlmChain\Platform\Message\Message;
 use PhpLlm\LlmChain\Platform\Message\MessageBag;
 use PhpLlm\LlmChain\Platform\PlatformInterface;
-use PhpLlm\LlmChain\Platform\Response\AsyncResponse;
 use PhpLlm\LlmChain\Platform\Response\TextResponse;
 use Symfony\Component\DependencyInjection\Attribute\Autowire;
 use Symfony\Component\HttpFoundation\RequestStack;
@@ -34,11 +33,8 @@ final class Chat
         file_put_contents($path, base64_decode($base64audio));
 
         $response = $this->platform->request(new Whisper(), Audio::fromFile($path));
-        assert($response instanceof AsyncResponse);
-        $response = $response->unwrap();
-        assert($response instanceof TextResponse);
 
-        $this->submitMessage($response->getContent());
+        $this->submitMessage($response->asText());
     }
 
     public function loadMessages(): MessageBag
