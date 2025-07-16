@@ -1,5 +1,10 @@
 # LLM Chain - Symfony Demo Chatbot Application
 
+> [!IMPORTANT]  
+> **PHP LLM becomes Symfony AI** - this project moved to [github.com/symfony/ai](https://github.com/symfony/ai).
+> Please use the new repository for all future development, issues, and contributions.
+> Thanks for your contributions - we hope to see you at Symfony AI!
+
 Simple Symfony demo application on top of [LLM Chain](https://github.com/php-llm/llm-chain) and its [integration bundle](https://github.com/php-llm/llm-chain-bundle).
 
 ## Examples
