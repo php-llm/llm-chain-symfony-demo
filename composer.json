@@ -3,6 +3,7 @@
     "type": "project",
     "description": "Symfony Demo Chat Application",
     "license": "MIT",
+    "abandoned": "symfony/ai-demo",
     "require": {
         "php": ">=8.4",
         "ext-ctype": "*",
